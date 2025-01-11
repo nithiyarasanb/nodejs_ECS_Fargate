@@ -1,0 +1,15 @@
+{
+  "name": "nodejs-microservice",
+  "version": "1.0.0",
+  "description": "A simple Node.js microservice exposing a /health endpoint",
+  "main": "server.js",
+  "scripts": {
+    "install:express": "npm install express",
+    "start": "node server.js"
+  },
+  "author": "Nithi",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
