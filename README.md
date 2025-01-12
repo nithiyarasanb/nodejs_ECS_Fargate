@@ -82,15 +82,15 @@ Build the Docker image.
 Push the image to Amazon ECR.
 Deploy the updated task definition to ECS Fargate.
 
-#GitHub Actions Workflow:
+GitHub Actions Workflow:
 
 The YAML file for the pipeline is located in .github/workflows/deploy.yml
 
 ### Scaling and Monitoring
 
-#Auto-scaling:
+Auto-scaling:
 Configured to scale up when CPU utilization exceeds 70%.
-#Monitoring:
+Monitoring:
 Logs are available in CloudWatch under the ECS log group.
 Alerts can be set up for high CPU/memory usage.
 
@@ -102,12 +102,12 @@ Security Groups: ALB and ECS services are restricted to specific ports and IPs.
 
 ### Troubleshooting
 
-#Unhealthy ALB Target:
+Unhealthy ALB Target:
 
 Check the container logs in CloudWatch.
 Verify the /health endpoint is functioning.
 
-#Failed CI/CD:
+Failed CI/CD:
 
 Confirm Dockerfile and Terraform files are in the root directory.
 Ensure GitHub secrets are configured correctly.
