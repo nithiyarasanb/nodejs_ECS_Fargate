@@ -1,6 +1,8 @@
 # nodejs_ECS_Fargate
 
 Deploying Node.js Microservice on AWS ECS Fargate
+![Deploy Status](https://img.shields.io/badge/Deploy-In_Progress-yellow?style=for-the-badge)
+
 
 ## 👨‍💻 Technologies and Tools
 
