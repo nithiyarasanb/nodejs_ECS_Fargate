@@ -67,3 +67,6 @@ jobs:
             --cluster $ECS_CLUSTER \
             --services $ECS_SERVICE \
             --query "services[0].deployments"
+
+
+            
