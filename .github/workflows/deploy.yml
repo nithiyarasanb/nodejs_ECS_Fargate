@@ -56,7 +56,7 @@ jobs:
             --service $ECS_SERVICE \
             --force-new-deployment
         run: |
-          docker run 3000:3000 $ECR_IMAGE
+          docker run -p 3000:3000 $ECR_IMAGE
 
       # Step 6: Verify Deployment
       - name: Verify ECS Deployment
