@@ -57,8 +57,7 @@ jobs:
             --cluster $ECS_CLUSTER \
             --service $ECS_SERVICE \
             --force-new-deployment
-        run: |
-          docker run -p 3000:3000 $ECR_IMAGE
+          
 
       # Step 6: Verify Deployment
       - name: Verify ECS Deployment
@@ -71,6 +70,7 @@ jobs:
             --cluster $ECS_CLUSTER \
             --services $ECS_SERVICE \
             --query "services[0].deployments"
+          docker run -p 3000:3000 $ECR_IMAGE
 
 
             
