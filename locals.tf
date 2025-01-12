@@ -1,7 +1,5 @@
 locals {
-  bucket_name = "tf-state-nithi"
-  table_name  = "tfstate"
-
+  
   ecr_repo_name = "nodejs-app-ecr-repo"
 
   nodejs_app_cluster_name        = "nodejs-app-cluster"
