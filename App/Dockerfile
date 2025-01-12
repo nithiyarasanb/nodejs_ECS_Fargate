@@ -1,8 +1,8 @@
 FROM node:16.20.1
 
-WORKDIR /src
+WORKDIR /App/src
 
-COPY ./src/package.json .
+COPY ./App/src/package.json .
 RUN npm install express
 
 COPY ./App/src/ .
