@@ -5,7 +5,7 @@ WORKDIR /src
 COPY ./src/package.json .
 RUN npm install express
 
-COPY ./src/ .
+COPY ./App/src/ .
 
 EXPOSE 3000
 
