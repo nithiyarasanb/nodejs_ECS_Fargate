@@ -56,14 +56,14 @@ GitHub Actions: To automate Docker builds and deployments.
 CloudWatch: For logging and monitoring.
 
 ### Setup and Deployment
-Clone the Repository:
+#Clone the Repository:
 
 bash
 git clone https://github.com/nithiyarasanb/nodejs_ECS_Fargate.git
 cd nodejs_ECS_Fargate
 Configure Environment Variables: Update the Terraform variables and GitHub secrets (AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, ECR_REPO_NAME, etc.).
 
-Initialize and Apply Terraform:
+#Initialize and Apply Terraform:
 
 bash
 terraform init
@@ -76,22 +76,20 @@ Check the /health endpoint to confirm the service is up.
 
 ### CI/CD Pipeline
 
-The pipeline includes the following stages:
+#The pipeline includes the following stages:
 Build the Docker image.
 Push the image to Amazon ECR.
 Deploy the updated task definition to ECS Fargate.
 
-GitHub Actions Workflow:
+#GitHub Actions Workflow:
 
 The YAML file for the pipeline is located in .github/workflows/deploy.yml
 
 ### Scaling and Monitoring
 
-Auto-scaling:
-
+#Auto-scaling:
 Configured to scale up when CPU utilization exceeds 70%.
-Monitoring:
-
+#Monitoring:
 Logs are available in CloudWatch under the ECS log group.
 Alerts can be set up for high CPU/memory usage.
 
@@ -103,12 +101,12 @@ Security Groups: ALB and ECS services are restricted to specific ports and IPs.
 
 ### Troubleshooting
 
-Unhealthy ALB Target:
+#Unhealthy ALB Target:
 
 Check the container logs in CloudWatch.
 Verify the /health endpoint is functioning.
 
-Failed CI/CD:
+#Failed CI/CD:
 
 Confirm Dockerfile and Terraform files are in the root directory.
 Ensure GitHub secrets are configured correctly.
