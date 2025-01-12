@@ -57,7 +57,7 @@ git clone https://github.com/nithiyarasanb/nodejs_ECS_Fargate.git
 cd nodejs_ECS_Fargate
 ````
 
-##Initialize and Apply Terraform:
+### 2. Initialize and Apply Terraform:
 
 ~~~bash
 terraform init
