@@ -64,7 +64,7 @@ terraform plan
 terraform apply
 ```
 
--** Verify Deployment **
+-**Verify Deployment**
 
 -Access the application via the ALB DNS name provided in the Terraform outputs.
 -Check the /health endpoint to confirm the service is up.
