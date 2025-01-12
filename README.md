@@ -64,43 +64,43 @@ terraform plan
 terraform apply
 ```
 
--**Verify Deployment**
+- **Verify Deployment**
 
--Access the application via the ALB DNS name provided in the Terraform outputs.
--Check the /health endpoint to confirm the service is up.
+- Access the application via the ALB DNS name provided in the Terraform outputs.
+- Check the /health endpoint to confirm the service is up.
 
 ###  CI/CD Pipeline
 
--**The pipeline includes the following stages**
--Build the Docker image.
--Push the image to Amazon ECR.
--Deploy the updated task definition to ECS Fargate.
+- **The pipeline includes the following stages**
+- Build the Docker image.
+- Push the image to Amazon ECR.
+- Deploy the updated task definition to ECS Fargate.
 
--**GitHub Actions Workflow**
+- **GitHub Actions Workflow**
 
--The YAML file for the pipeline is located in .github/workflows/deploy.yml
+- The YAML file for the pipeline is located in .github/workflows/deploy.yml
 
 ### Scaling and Monitoring
 
--**Auto-scaling**
--Configured to scale up when CPU utilization exceeds 70%.
--**Monitoring**
--Logs are available in CloudWatch under the ECS log group.
--Alerts can be set up for high CPU/memory usage.
+- **Auto-scaling**
+- Configured to scale up when CPU utilization exceeds 70%.
+- **Monitoring**
+- Logs are available in CloudWatch under the ECS log group.
+- Alerts can be set up for high CPU/memory usage.
 
 ### Security Practices
 
--**IAM Roles**: Tasks and services use least privilege roles.
--**Secret Management**: Sensitive information is managed using GitHub secrets.
--**Security Groups**: ALB and ECS services are restricted to specific ports and IPs.
+- **IAM Roles**: Tasks and services use least privilege roles.
+- **Secret Management**: Sensitive information is managed using GitHub secrets.
+- **Security Groups**: ALB and ECS services are restricted to specific ports and IPs.
 
 ### Troubleshooting
 
--**Unhealthy ALB Target**
--Check the container logs in CloudWatch.
--Verify the /health endpoint is functioning.
+- **Unhealthy ALB Target**
+- Check the container logs in CloudWatch.
+- Verify the /health endpoint is functioning.
 
--**Failed CI/CD**
--Confirm Dockerfile and Terraform files are in the root directory.
--Ensure GitHub secrets are configured correctly.
+- **Failed CI/CD**
+- Confirm Dockerfile and Terraform files are in the root directory.
+- Ensure GitHub secrets are configured correctly.
 
