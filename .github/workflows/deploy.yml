@@ -34,7 +34,7 @@ jobs:
           ECR_REPO_NAME: ${{ secrets.ECR_REPO_NAME }}
         run: |
           echo "Building the Docker image..."
-          docker build -t $ECR_REPO_NAME -f ./app/Dockerfile .
+          docker build -t $ECR_REPO_NAME -f ./App/Dockerfile .
 
           echo "Tagging the Docker image..."
           docker tag $ECR_REPO_NAME:latest ${{ steps.ecr-login.outputs.registry }}/$ECR_REPO_NAME:latest
