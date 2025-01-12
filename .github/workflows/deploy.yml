@@ -27,6 +27,8 @@ jobs:
       - name: Log in to Amazon ECR
         id: ecr-login
         uses: aws-actions/amazon-ecr-login@v1
+        with:
+          mask-password: 'false'
 
       # Step 4: Build and push Docker image to Amazon ECR
       - name: Build and Push Docker Image
